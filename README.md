@@ -1,6 +1,6 @@
 # thesis-code
 
-from the model code folder is an explanation of the models.py and models_main.py files
+From the model code folder is an explanation of the models.py and models_main.py files
 
 explaine models_main.py
 This code defines several functions that are useful for loading, preparing, training, and evaluating a deep learning model for time series forecasting. Here is a summary of the main functions:
