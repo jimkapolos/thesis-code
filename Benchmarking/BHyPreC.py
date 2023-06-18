@@ -54,7 +54,7 @@ model.add(GRU(64, activation='tanh', return_sequences=True))
 model.add(LSTM(100, activation='tanh'))
 model.add(Dense(n_steps_out))
 model.compile(optimizer=Adam(learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-07), loss='huber',
-              metrics=['accuracy', 'mse', 'mae'])
+              metrics=[tf.keras.metrics.MeanSquaredError(), tf.keras.metrics.MeanAbsoluteError()])
 
 
 start_time = time.monotonic()
