@@ -6,8 +6,8 @@ import time
 from datetime import timedelta
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
-n_steps_in = 3
-n_steps_out = 2
+n_steps_in = 100
+n_steps_out = 50
 n_features = 1
 
 list_of_csv = [1, 9, 37, 90, 185, 216, 228, 230, 234, 251, 274, 275, 283, 296, 297, 305, 317, 329, 332, 380, 381, 385]

@@ -57,3 +57,11 @@ functionFile.metrics_call("test",test_y, yhat)
 yval = model.predict(val_X)
 functionFile.metrics_call("val",val_y, yval)
 print(timedelta(seconds=end_time - start_time))
+
+total_params_size = 0
+for layer in model.layers:
+    weights = layer.get_weights()
+    for w in weights:
+        total_params_size += np.asarray(w).nbytes
+
+print(f"Model parameters size: {total_params_size} bytes")
