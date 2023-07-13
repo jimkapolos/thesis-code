@@ -140,9 +140,9 @@ def load_partition(idx: int):
 
 if __name__ == "__main__":
     # changes in those values bust be also performed in the server
-    n_steps_in = 3
-    n_steps_out = 2
+    n_steps_in = 100
+    n_steps_out = 50
     n_features = 1
-    n_neurons = 10
+    # n_neurons = 10
     # n_epochs = 3
     main()

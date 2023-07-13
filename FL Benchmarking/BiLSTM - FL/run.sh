@@ -5,7 +5,7 @@
 echo "Starting server"
 
 LOCAL_EPOCHS=3
-NEURONS=5
+NEURONS=50
 FL_Rounds=2
 python server.py --rounds=$FL_Rounds --n_neurons=$NEURONS &
 sleep 3  # Sleep for 3s to give the server enough time to start

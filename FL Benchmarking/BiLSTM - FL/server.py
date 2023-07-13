@@ -34,11 +34,11 @@ def main() -> None:
 
     # Create strategy
     strategy = fl.server.strategy.FedAvg(
-        fraction_fit=0.8,
-        fraction_evaluate=0.7,
-        min_fit_clients=15,  # changed commented out
-        min_evaluate_clients=10,
-        min_available_clients=20,
+        fraction_fit=1, #0.8,
+        fraction_evaluate=1, #0.7,
+        # min_fit_clients=15,  # changed commented out
+        # min_evaluate_clients=10,
+        # min_available_clients=20,
         evaluate_fn=get_evaluate_fn(model),
         on_fit_config_fn=fit_config,
         # on_evaluate_config_fn=evaluate_config,
@@ -138,9 +138,10 @@ def weighted_average(metrics: List[Tuple[int, Metrics]]) -> Metrics:
 
 if __name__ == "__main__":
     # changes in those values bust be also performed in the client
-    n_steps_in = 3
-    n_steps_out = 2
+    n_steps_in = 100
+    n_steps_out = 50
     n_features = 1
+    # n_neurons = 10
     # n_neurons = 10
     n_epochs = 3
     main()
