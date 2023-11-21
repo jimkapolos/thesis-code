@@ -1,0 +1,17 @@
+# Use an official Python runtime as a parent image
+FROM python:latest
+
+
+# Set the working directory in the container
+WORKDIR /docker_influxdb
+
+
+# Install any needed packages
+RUN pip install --upgrade pip
+RUN pip install psutil influxdb influxdb_client
+
+# Copy Python script into the container
+COPY influxdb_cpu_usage.py .
+
+# Run the script when the container launches
+CMD ["python", "influxdb_cpu_usage.py"]
